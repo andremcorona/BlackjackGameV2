@@ -1,17 +1,12 @@
 from deck import Deck
 from hand import Hand
 from utils import *
+from gui import *
 
 def main():
-    deck = Deck()
-    gameOfBJ(deck)
-    
-    # Ask user if they would like to keep playing
-    playAgain = input("Would you like to play again? (Yes/No): ")
-
-    if playAgain == "Yes":
-        checkForShuffle(deck)
-        gameOfBJ(deck)
+    root = tk.Tk()
+    gui = BlackjackGUI(root)
+    root.mainloop()
 
 
 if __name__ == "__main__":
